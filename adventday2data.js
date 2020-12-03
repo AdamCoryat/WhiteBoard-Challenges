@@ -1,4 +1,4 @@
-let passwords = [[3,6, "s", "ssdsssss"],
+let password = [[3,6, "s", "ssdsssss"],
 [17,19, "f", "cnffsfffzhfnsffttms"],
 [8,11, "c", "tzvtwncnwvwttp"],
 [8,10, "r", "rwrrtrvttrrrr"],
@@ -998,30 +998,3 @@ let passwords = [[3,6, "s", "ssdsssss"],
 [4,11, "p", "jzpprcpcmmpb"],
 [9,10, "f", "fffpffffjff"],
 [1,5, "d", "ndtdc"]]
-
-
-function validPassword(arr){
-  let correct = 0
-  let count = 0
-  let password = ""
-  let min = 0
-  let max = 0
-  let letter = ""
-  for(let i = 0; i < arr.length; i++){
-    let pd = arr[i]
-     min = pd[0]
-     max = pd[1]
-     letter = pd[2]
-    password = pd[3]
-    for(let a = 0; a < password.length; a++){
-      let char = password[a]
-      if(char == letter){
-        count++
-      }
-    }
-    if(count > min && count < max){
-      correct++
-    }
-  }
-return correct
-}
