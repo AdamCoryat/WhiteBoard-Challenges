@@ -1016,12 +1016,13 @@ function validPassword(arr){
     for(let a = 0; a < password.length; a++){
       let char = password[a]
       if(char == letter){
-        count++
+        count += 1
       }
     }
-    if(count > min && count < max){
-      correct++
+    if(count >= min && count <= max){
+      correct += 1
     }
+    count = 0
   }
 return correct
 }
