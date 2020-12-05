@@ -322,14 +322,54 @@ let route = ['.....#....#...#.#..........#...',
 '..##........................##.',
 '.....#....#..............#....#']
 
+let test = ["..##.........##.........##.........##.........##.........##.......",
+"#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..",
+".#....#..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.",
+"..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#",
+".#...##..#..#...##..#..#...##..#..#...##..#..#...##..#..#...##..#.",
+"..#.##.......#.##.......#.##.......#.##.......#.##.......#.##.....",
+".#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#",
+".#........#.#........#.#........#.#........#.#........#.#........#",
+"#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...",
+"#...##....##...##....##...##....##...##....##...##....##...##....#",
+".#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#"]
+
 //each line is 31 spaces
 
 function howManyTrees(arr){
+  let trees = 0
+  let position = 5
+//Itterate through the array of strings
+  for(let route = 1; route < arr.length; route+=2){
+    let path = arr[route]
+//Itterate through the indvidual path to find the trees
+     if(position == 31){
+       position = 0
+     }
+     
+     let isTree = path[position]
+//Check if its a tree then advance 3 on the position for the next itteration
+     if(isTree == "#"){
+       trees++
+     }
+//Check what the position is and see if it needs to be reset
+       position += 1
+  }
+return trees
+}
+
+//Right 1, down 1. 67
+//Right 3, down 1. 299
+//Right 5, down 1. 74
+//Right 7, down 1. 77
+//Right 1, down 2. 29
+
+function testHowManyTrees(arr){
   debugger
   let trees = 0
-  let position = 2
+  let position = 3
 //Itterate through the array of strings
-  for(let route = 0; route < arr.length; route++){
+  for(let route = 1; route < arr.length; route++){
     let path = arr[route]
 //Itterate through the indvidual path to find the trees
      let isTree = path[position]
@@ -342,16 +382,7 @@ function howManyTrees(arr){
      if(isTree == "."){
        position += 3
      }
-//Check what the position is and see if it needs to be reset
-     if(position == 29){
-       position = 1
-     }
-     if(position == 30){
-       position = 2
-     }
-     if(position == 31){
-       position = 3
-     }
   }
 return trees
 }
+
