@@ -33,8 +33,3 @@ let spaces = ""
   star.slice(0, num)
   }
 }
-
-  *  
- ** 
- *** 
-*****
