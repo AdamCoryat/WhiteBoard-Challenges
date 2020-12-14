@@ -37,7 +37,6 @@ let spaces = ""
 function doWhile(arr){
   let x = 2
   let b = true
-do(x - 2){
-  while(b == true)
+
 }
-}
+
