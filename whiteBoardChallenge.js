@@ -40,3 +40,4 @@ function doWhile(arr){
 
 }
 
+let ten = 10
