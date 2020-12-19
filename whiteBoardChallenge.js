@@ -4,17 +4,17 @@
 input = [1,2,3,4,5,6]
 
 function oddInt(input){
-let odd = []
+let odds = []
 for(let i = 0; i < input.length; i++){
   let num = input[i]
   if(num == !typeof Number){
     continue
   }
   if(num % 2 != 0){
-    odd.push(num)
+    odds.push(num)
   }
 }
-return odd
+return odds
 }
 
 
