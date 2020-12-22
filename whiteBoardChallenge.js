@@ -1,7 +1,7 @@
 
 // how many times a char comes up in a string
 // for loop 
-input = [1,2,3,4,5,6]
+input = [1,2,3,4,5,8]
 
 function oddInt(input){
 let odds = []
@@ -18,7 +18,7 @@ return odds
 }
 
 
-let num = 5
+let num = 7
 function asciiArt(num){
 let star = ""  
 let spaces = ""
