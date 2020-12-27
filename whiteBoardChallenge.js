@@ -7,7 +7,7 @@ function oddInt(input){
 let odds = []
 for(let i = 0; i < input.length; i++){
   let num = input[i]
-  if(num == !typeof Number){
+  if(num == !typeof number){
     continue
   }
   if(num % 2 != 0){
