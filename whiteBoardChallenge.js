@@ -41,3 +41,15 @@ function doWhile(arr){
 }
 
 let ten = 11
+
+
+function findTheA(arr){
+  let index = 0
+  for(let i = 0; i < arr.length; i++){
+    let char = arr[i]
+    if(char == "a"){
+      index = i
+    }
+  }
+  return index
+}
