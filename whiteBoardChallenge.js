@@ -1,7 +1,7 @@
 
 // how many times a char comes up in a string
 // for loop 
-input = [1,2,3,4,5,8]
+input = [1,2,3,4,5,6]
 
 function oddInt(input){
 let odds = []
